@@ -1,7 +1,3 @@
-#!/usr/bin/bash
-
-# Author: Zachery Linscott
-
 # This file serves multiple (too many) functions.
 # 1st: 
 # It checks if miniconda3 is installed,

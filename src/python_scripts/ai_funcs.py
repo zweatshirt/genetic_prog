@@ -1,6 +1,6 @@
 import torch
 
-def train(model, device, train_dataloader, optimizer, epochs):
+def train(model, device, train_dataloader, optimizer, epochs, loss_fn):
     model.train()
 
     for batch_ids, (seq, classes) in enumerate(train_dataloader):
