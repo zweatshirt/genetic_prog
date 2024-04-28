@@ -40,11 +40,7 @@ NECESSARY:
 2. Run `./installs.sh`
 3. Run `./get_beds.sh` and enter the path of the text file containing links to bed files. 
 4. Run `./prep.sh`
-<<<<<<< HEAD
-=======
-5. Run `python3 prep_seqs.py`
-6. Run genome_conv.ipynb as a jupyter notebook and run the cells.
+5. Run genome_conv.ipynb as a jupyter notebook and run the cells. Make sure you have the environment activated and the kernel set to Python 3.9.
 
 Note to self:
 Refactor file structure.
->>>>>>> cd249b72b5f92eee5120e3edef8d89e902b2ac23
