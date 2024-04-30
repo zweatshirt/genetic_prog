@@ -1,15 +1,16 @@
 import torch
 
+# Function for model training
 def train(model, device, train_dataloader, optimizer, epochs, loss_fn):
     model.train()
 
     for batch_ids, (seq, classes) in enumerate(train_dataloader):
-        classes=classes.type(torch.LongTensor)
-        seq, classes=seq.to(device), classes.to(device)
+        classes = classes.type(torch.LongTensor)
+        seq, classes= seq.to(device), classes.to(device)
         torch.autograd.set_detect_anomaly(True)     
         optimizer.zero_grad()
-        output=model(seq)
-        loss = loss_fn(output,classes)            
+        output = model(seq)
+        loss = loss_fn(output, classes)            
         loss.backward()
         optimizer.step()
 
@@ -44,6 +45,8 @@ def validation(model, device, valid_dataloader):
     model.eval()
     test_loss=0
     correct=0
+    # precision matrix values 
+    # (true positive, true negative, false positive, false negative)
     tp, tn, fp, fn = 0, 0, 0, 0
     
     with torch.no_grad():
@@ -54,11 +57,12 @@ def validation(model, device, valid_dataloader):
             test_loss+=F.nll_loss(y_hat,classes, reduction='sum').item()
             _,y_pred=torch.max(y_hat, 1)
             correct+=(y_pred==classes).sum().item()
+            # sum precision matrix vals
             tp, tn, fp, fn = confusion_matrix(y_pred, classes, tp, tn, fp, fn)
         test_loss/=len(valid_dataloader)
         print("\n Validation set: Average loss: {:.0f},Accuracy:{}/{} ({:.0f}%)\n".format(
                 test_loss,correct,len(valid_dataloader.dataset),100.*correct/len(valid_dataloader.dataset)))
-        print('='*30)
+        print('='*30)        
     precision = tp / (tp + fp)
     recall = tp / (tp + fn)
     f1 = 2 * (precision * recall) / (precision + recall)
