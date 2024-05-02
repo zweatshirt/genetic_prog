@@ -111,6 +111,7 @@ def trim_composite(seqs, mean_of_means):
 
 # joins the sequence and its label into one string for file writing
 # only necessary in writing to shuffled_data.txt
+# bad code, change to: return ["\t".join(seq) for seq in seqs]
 def str_join(seqs):
         to_write = []
         [to_write.append("\t".join(seq)) for seq in seqs]
