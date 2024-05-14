@@ -33,7 +33,7 @@ Testing was done in conjuction with a peer at SIUe under the supervision of Dr. 
 - The data from both cell types were passed into NiN (Network in Network) and AlexNet networks (written using PyTorch).
 - The trained NiN models performed with an accuracy of 91-94%
 - The AlexNet models performed with 96-97% accuracy.
-- I made slight modifications to the NiN network for lymphoblast data, and ultimately found an increase in accuracy from 91% to 94% and a precision of 96%. This was a pretty significant change.
+- I made slight modifications to the NiN network for lymphoblast data by adding the sigmoid activation prior to the output layer, and ultimately found an increase in accuracy from 91% to 94% and a precision of 96%. This was a pretty significant change.
 
 ### Validation sets were used to ensure there was no data overfitting.
 
