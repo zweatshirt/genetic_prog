@@ -35,6 +35,7 @@ Testing was done in conjuction with a peer at SIUe under the supervision of Dr. 
 
 
 #### I would like to extend this research to test the accuracy and precision of other models along with these models' generalization abilities across different sequencing techniques.
+- The use of CNNs in conjuction with ATAC-seq data proves to be really interesting, since ATAC-seq requires less input in comparison to other sequencing techniques. This, to me, shows that it is a powerful tool when it comes to retrieving as much data as possible from rare cell types where the data output would typically be lacking in quantity. As we know, CNNs typically require a large set of data to be useful.
 
 
 ## Steps to run:
