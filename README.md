@@ -9,6 +9,10 @@ attempt to classify the passed in sequence as being from an accessible or inacce
 
 Testing was done in conjuction with a peer at SIUe under the supervision of Dr. Manas Jyoti Das.
 
+#### I would like to extend this research to test the accuracy and precision of other models along with these models' generalization abilities across different sequencing techniques.
+- The use of CNNs in conjuction with ATAC-seq data proves to be really interesting, since ATAC-seq requires less input in comparison to other sequencing techniques. This, to me, shows that it is a powerful tool when it comes to retrieving as much data as possible from rare cell types where the data output would typically be lacking in quantity. As we know, CNNs typically require a large set of data to be useful.
+
+
 ## Data preprocessing and prep
 1. Bed files are collected from a collection of biosamples.
 2. The bed files are parsed for the ranges of the features where the chromatin is accessible.
@@ -32,10 +36,6 @@ Testing was done in conjuction with a peer at SIUe under the supervision of Dr. 
 - I made slight modifications to the NiN network for lymphoblast data, and ultimately found an increase in accuracy from 91% to 94% and a precision of 96%. This was a pretty significant change.
 
 ### Validation sets were used to ensure there was no data overfitting.
-
-
-#### I would like to extend this research to test the accuracy and precision of other models along with these models' generalization abilities across different sequencing techniques.
-- The use of CNNs in conjuction with ATAC-seq data proves to be really interesting, since ATAC-seq requires less input in comparison to other sequencing techniques. This, to me, shows that it is a powerful tool when it comes to retrieving as much data as possible from rare cell types where the data output would typically be lacking in quantity. As we know, CNNs typically require a large set of data to be useful.
 
 
 ## Steps to run:
