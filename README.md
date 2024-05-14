@@ -8,7 +8,6 @@ attempt to classify the passed in sequence as being from an accessible or inacce
 - email me for the reference genome files if needed: zach7307@gmail.com
 
 Testing was done in conjuction with a peer at SIUe under the supervision of Dr. Manas Jyoti Das.
-Necessary data is first collected and cleaned extensively.
 
 ## Data preprocessing and prep
 1. Bed files are collected from a collection of biosamples.
@@ -27,10 +26,15 @@ Necessary data is first collected and cleaned extensively.
 13. The data is one-hot-encoded for the purpose of testing in the convolutional neural network.
 
 ## Networks
-- The data from both cell types were passed into NiN (Network in Network) and AlexNet networks.
+- The data from both cell types were passed into NiN (Network in Network) and AlexNet networks (written using PyTorch).
 - The trained NiN models performed with an accuracy of 91-94%
 - The AlexNet models performed with 96-97% accuracy.
-- I made slight modifications to NiN with for determining lymphocyte chromatin accessibily, and ultimately found an increase in accuracy from 91% to 94% and a precision of 96%.
+- I made slight modifications to the NiN network for lymphoblast data, and ultimately found an increase in accuracy from 91% to 94% and a precision of 96%. This was a pretty significant change.
+
+### Validation sets were used to ensure there was no data overfitting.
+
+
+#### I would like to extend this research to test the accuracy and precision of other models along with these models' generalization abilities across different sequencing techniques.
 
 
 ## Steps to run:
